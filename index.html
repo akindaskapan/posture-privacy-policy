@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
@@ -19,56 +19,69 @@
             padding: 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 50px;
         }
         h1 {
             color: #0369a1;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
             text-align: center;
         }
         .last-updated {
             text-align: center;
             color: #64748b;
-            margin-bottom: 30px;
-            font-size: 0.9em;
+            margin-bottom: 40px;
+            font-size: 1em;
+            font-weight: 500;
         }
         h2 {
             color: #0ea5e9;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #e0f2fe;
-            padding-bottom: 10px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #e0f2fe;
+            padding-bottom: 12px;
         }
         h3 {
             color: #0369a1;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.3em;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             color: #475569;
+            font-size: 1.05em;
         }
         ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
+            margin-left: 35px;
+            margin-bottom: 18px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #475569;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #0369a1;
+            font-weight: 600;
         }
         .important {
             background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .important h2 {
+            color: #f59e0b;
+            border: none;
+            margin-top: 0;
         }
         .important strong {
             color: #f59e0b;
@@ -76,35 +89,51 @@
         a {
             color: #0ea5e9;
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
         }
         .lang-switch {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .lang-switch button {
             background: #0ea5e9;
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 10px;
+            padding: 12px 30px;
+            margin: 0 8px;
+            border-radius: 12px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            font-weight: 600;
         }
         .lang-switch button:hover {
             background: #0369a1;
+            transform: translateY(-2px);
         }
         .lang-switch button.active {
             background: #0369a1;
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
         }
         .content {
             display: none;
         }
         .content.active {
             display: block;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -114,68 +143,361 @@
             <button onclick="switchLang('en')" id="btn-en" class="active">English</button>
             <button onclick="switchLang('tr')" id="btn-tr">Türkçe</button>
         </div>
-        <!-- English --><div id="content-en" class="content active">
-<h1>Privacy Policy for Posture</h1>
-<p class="last-updated"><strong>Last Updated:</strong> December 25, 2024</p>
-<h2>Introduction</h2>
-<p>Posture is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.</p>
-<h2>Information We Collect</h2>
-<h3>Locally Stored Data</h3>
-<p>All settings are stored locally on your device:</p>
-<ul><li>Notification preferences</li><li>Reminder times and frequency</li><li>Onboarding status</li></ul>
-<p>This data never leaves your device and is deleted when you uninstall.</p>
-<h3>Analytics (Anonymous)</h3>
-<p>We use <strong>Firebase Analytics</strong>:</p>
-<ul><li>Screen views</li><li>App opens</li><li>Device type (anonymous)</li></ul>
-<p><strong>We do NOT collect:</strong> Name, email, location, photos, or health data.</p>
-<h3>Crash Reports</h3>
-<p>We use <strong>Sentry</strong> to fix bugs:</p>
-<ul><li>Error logs</li><li>Device type</li></ul>
-<h2>Data Storage</h2>
-<p>Local data is protected by iOS security. Third-party data is processed by Firebase and Sentry (GDPR compliant).</p>
-<h2>Notifications</h2>
-<p>Local notifications are scheduled on your device. Disable anytime in Settings.</p>
-<div class="important">
-<h2>Medical Disclaimer</h2>
-<p><strong>Important:</strong> This app provides general guidance only and is <strong>not medical advice</strong>. Consult a healthcare professional for chronic pain or health concerns.</p>
-</div>
-<h2>Your Rights</h2>
-<ul><li><strong>Delete:</strong> Uninstall to remove all data</li></ul>
-<h2>Contact</h2>
-<p>Email: <a href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a></p>
-</div>
-<!-- Turkish --><div id="content-tr" class="content">
-<h1>Gizlilik Politikası</h1>
-<p class="last-updated"><strong>Son Güncelleme:</strong> 25 Aralık 2024</p>
-<h2>Giriş</h2>
-<p>Posture gizliliğinizi korumaya kararlıdır.</p>
-<h2>Topladığımız Bilgiler</h2>
-<h3>Cihazınızda Saklanan</h3>
-<p>Tüm ayarlar cihazınızda:</p>
-<ul><li>Bildirim tercihleri</li><li>Hatırlatıcı zamanları</li></ul>
-<h3>Analitik (Anonim)</h3>
-<p><strong>Firebase Analytics</strong> kullanıyoruz:</p>
-<ul><li>Ekran görüntülemeleri</li><li>Uygulama açılışları</li></ul>
-<p><strong>Toplamıyoruz:</strong> İsim, email, konum, fotoğraf.</p>
-<h3>Çökme Raporları</h3>
-<p><strong>Sentry</strong> kullanıyoruz.</p>
-<h2>Bildirimler</h2>
-<p>Yerel bildirimler. Ayarlar'dan kapatabilirsiniz.</p>
-<div class="important">
-<h2>Medikal Feragatname</h2>
-<p><strong>Önemli:</strong> Bu uygulama genel bilgi içindir, <strong>tıbbi tavsiye değildir</strong>. Sağlık sorunları için uzmana danışın.</p>
-</div>
-<h2>İletişim</h2>
-<p>Email: <a href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a></p>
-</div>
+        <!-- English Version -->
+        <div id="content-en" class="content active">
+            <h1>Privacy Policy for Posture</h1>
+            <p class="last-updated"><strong>Last Updated:</strong> December 25, 2024</p>
+            <h2>Introduction</h2>
+            <p>Posture ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains
+                how we handle information when you use our mobile application.</p>
+            <h2>Information We Collect</h2>
+            <h3>Locally Stored Data</h3>
+            <p>All your settings are stored locally on your device only:</p>
+            <ul>
+                <li>Notification preferences (enabled/disabled)</li>
+                <li>Reminder start and end times</li>
+                <li>Reminder frequency settings (15/30/45/60 minutes)</li>
+                <li>Onboarding completion status</li>
+                <li>Theme preferences (light/dark mode)</li>
+            </ul>
+            <p>This data <strong>never leaves your device</strong> and is automatically deleted when you uninstall the
+                app.</p>
+            <h3>Analytics Data (Non-Personal)</h3>
+            <p>We use <strong>Firebase Analytics</strong> to understand how our app is used and improve user experience:
+            </p>
+            <ul>
+                <li><strong>Screen views:</strong> Which screens you visit (e.g., Home, Guide)</li>
+                <li><strong>App opens:</strong> When and how often you use the app</li>
+                <li><strong>Device information:</strong> Device type (iPhone model), OS version (anonymous)</li>
+                <li><strong>App performance:</strong> Load times, app stability metrics</li>
+                <li><strong>Session duration:</strong> How long you use the app per session</li>
+            </ul>
+            <p><strong>We do NOT collect:</strong></p>
+            <ul>
+                <li>Your name, email address, or any contact information</li>
+                <li>Location data or GPS coordinates</li>
+                <li>Photos, videos, or any personal files</li>
+                <li>Health data or fitness information</li>
+                <li>Browsing history or data from other apps</li>
+            </ul>
+            <h3>Crash Reports</h3>
+            <p>We use <strong>Sentry</strong> to identify and fix bugs to improve app stability:</p>
+            <ul>
+                <li>Crash logs and error messages</li>
+                <li>Device type and operating system version</li>
+                <li>App version and build number</li>
+                <li>App state at the time of crash (which screen, what action)</li>
+            </ul>
+            <p>This helps us quickly identify and resolve issues. <strong>No personal information is collected.</strong>
+            </p>
+            <h2>Data Storage</h2>
+            <h3>Local Storage</h3>
+            <p>App settings are stored on your device using secure iOS storage mechanisms (AsyncStorage). This data is
+                protected by your device's security features including:</p>
+            <ul>
+                <li>Device passcode/password protection</li>
+                <li>Face ID / Touch ID biometric security</li>
+                <li>iOS sandboxed storage (isolated from other apps)</li>
+            </ul>
+            <h3>Third-Party Storage</h3>
+            <p>Analytics and crash data are processed by trusted third-party services:</p>
+            <ul>
+                <li><strong>Firebase (Google):</strong> Stores anonymous analytics data. <a
+                        href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>
+                </li>
+                <li><strong>Sentry:</strong> Stores crash reports and error logs. <a href="https://sentry.io/privacy/"
+                        target="_blank">Sentry Privacy Policy</a></li>
+            </ul>
+            <p>Both services are fully compliant with GDPR, CCPA, and international data protection standards. Data is
+                encrypted in transit and at rest.</p>
+            <h2>Third-Party Services</h2>
+            <h3>Firebase Analytics (Google)</h3>
+            <p>We use Firebase Analytics to understand app usage patterns and improve features. Firebase may collect:
+            </p>
+            <ul>
+                <li>Anonymous device identifiers (not linked to your personal identity)</li>
+                <li>App interaction events (button clicks, screen changes)</li>
+                <li>Performance metrics (load times, responsiveness)</li>
+                <li>Aggregate user behavior patterns</li>
+            </ul>
+            <p>Firebase uses this data to provide us with insights but <strong>does not use it for advertising</strong>.
+            </p>
+            <p><a href="https://firebase.google.com/support/privacy" target="_blank">Learn more about Firebase
+                    Privacy</a></p>
+            <h3>Sentry</h3>
+            <p>We use Sentry for crash reporting to maintain app quality and fix bugs quickly. Sentry may collect:</p>
+            <ul>
+                <li>Error logs and stack traces</li>
+                <li>Device information (model, OS version)</li>
+                <li>App state and user actions leading to the crash</li>
+                <li>Time and date of the error</li>
+            </ul>
+            <p>This information helps us reproduce and fix bugs efficiently.</p>
+            <p><a href="https://sentry.io/privacy/" target="_blank">Learn more about Sentry Privacy</a></p>
+            <h2>Notifications</h2>
+            <p>The app uses <strong>local notifications</strong> to remind you about posture checks. These notifications
+                are:</p>
+            <ul>
+                <li><strong>Scheduled entirely on your device:</strong> No external servers are involved</li>
+                <li><strong>Customizable:</strong> You control frequency, timing, and content</li>
+                <li><strong>Easy to disable:</strong> Turn off anytime in iOS Settings → Notifications → Posture</li>
+                <li><strong>Privacy-friendly:</strong> Notification content never leaves your device</li>
+            </ul>
+            <p>We do not send push notifications from external servers or track notification interactions.</p>
+            <div class="important">
+                <h2>⚠️ Medical Disclaimer</h2>
+                <p><strong>Important Notice:</strong> The information provided in the Posture app is for <strong>general
+                        guidance only</strong> and is <strong>not a substitute for professional medical advice,
+                        diagnosis, or treatment</strong>.</p>
+                <p>If you have chronic pain, persistent discomfort, health concerns, or pre-existing medical conditions,
+                    please <strong>consult a qualified healthcare professional</strong> before using any posture
+                    recommendations or exercises provided in this app.</p>
+                <p>We are not medical professionals, and the content in the app should not be considered medical advice.
+                    Always seek the guidance of your doctor or other qualified health provider with any questions you
+                    may have regarding a medical condition.</p>
+                <p><strong>Use this app at your own risk.</strong> We are not liable for any health issues or injuries
+                    that may arise from using the app's recommendations.</p>
+            </div>
+            <h2>Data Security</h2>
+            <p>We take data security very seriously and implement industry-standard practices:</p>
+            <ul>
+                <li><strong>Local data protection:</strong> Secured by iOS built-in security features</li>
+                <li><strong>Encrypted transmission:</strong> All data sent to Firebase and Sentry uses HTTPS encryption
+                </li>
+                <li><strong>No data selling:</strong> We do not sell, rent, or share your data with advertisers or third
+                    parties</li>
+                <li><strong>Minimal data collection:</strong> We only collect what's necessary to improve the app</li>
+                <li><strong>Regular security audits:</strong> Our third-party services undergo regular security reviews
+                </li>
+            </ul>
+            <h2>Children's Privacy</h2>
+            <p>We do not knowingly collect personalinformation from children under the age of 13. Since the app collects
+                minimal anonymous analytics data and does not require account creation, the risk of child data exposure
+                is very low.</p>
+            <p>If you are a parent or guardian and believe your child has used this app, please contact us at <a
+                    href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a>.</p>
+            <h2>Your Rights (GDPR & CCPA Compliance)</h2>
+            <p>Under GDPR (European users) and CCPA (California users), you have the following rights:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> You can request information about what data we have (minimal
+                    anonymous analytics)</li>
+                <li><strong>Right to Delete:</strong> Uninstall the app to immediately remove all local data. Contact us
+                    to request deletion of analytics data</li>
+                <li><strong>Right to Opt-Out:</strong> While we don't currently support in-app analytics opt-out, you
+                    can disable analytics at the OS level</li>
+                <li><strong>Right to Data Portability:</strong> Since we collect minimal anonymous data, there is no
+                    portable personal data</li>
+                <li><strong>Right to Object:</strong> You can object to data processing by uninstalling the app</li>
+            </ul>
+            <p>To exercise any of these rights, contact us at: <a
+                    href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a></p>
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time as we add new features, services, or comply with
+                legal requirements. When we make changes:</p>
+            <ul>
+                <li>The updated policy will be posted on this page</li>
+                <li>The "Last Updated" date will be revised</li>
+                <li>For significant changes, we may notify users through the app or via email (if we have it)</li>
+            </ul>
+            <p>We encourage you to review this Privacy Policy periodically.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices,
+                please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/akindaskapan/posture-privacy-policy"
+                        target="_blank">Privacy Policy Repository</a></li>
+            </ul>
+            <p>We will respond to all inquiries within 7 business days.</p>
+            <hr style="margin: 40px 0; border: none; border-top: 2px solid #e0f2fe;">
+            <p style="text-align: center; color: #64748b; font-size: 0.95em;"><strong>Last Updated:</strong> December
+                25, 2024</p>
+        </div>
+         <!-- Turkish Version -->
+        <div id="content-tr" class="content">
+            <h1>Gizlilik Politikası – Posture</h1>
+            <p class="last-updated"><strong>Son Güncelleme:</strong> 25 Aralık 2024</p>
+            <h2>Giriş</h2>
+            <p>Posture ("biz", "bizim" veya "uygulama"), gizliliğinizi korumaya kararlıdır. Bu Gizlilik Politikası,
+                mobil uygulamamızı kullandığınızda bilgilerinizi nasıl işlediğimizi açıklar.</p>
+            <h2>Topladığımız Bilgiler</h2>
+            <h3>Cihazınızda Saklanan Veriler</h3>
+            <p>Tüm ayarlarınız yalnızca cihazınızda yerel olarak saklanır:</p>
+            <ul>
+                <li>Bildirim tercihleri (açık/kapalı)</li>
+                <li>Hatırlatıcı başlangıç ve bitiş saatleri</li>
+                <li>Hatırlatıcı sıklığı ayarları (15/30/45/60 dakika)</li>
+                <li>Onboarding tamamlanma durumu</li>
+                <li>Tema tercihleri (açık/koyu mod)</li>
+            </ul>
+            <p>Bu veriler <strong>cihazınızdan asla çıkmaz</strong> ve uygulamayı kaldırdığınızda otomatik olarak
+                silinir.</p>
+            <h3>Analitik Veriler (Kişisel Olmayan)</h3>
+            <p>Uygulamanın nasıl kullanıldığını anlamak ve kullanıcı deneyimini iyileştirmek için <strong>Firebase
+                    Analytics</strong> kullanıyoruz:</p>
+            <ul>
+                <li><strong>Ekran görüntülemeleri:</strong> Hangi ekranları ziyaret ettiğiniz (örn. Ana Sayfa, Rehber)
+                </li>
+                <li><strong>Uygulama açılışları:</strong> Uygulamayı ne zaman ve ne sıklıkta kullandığınız</li>
+                <li><strong>Cihaz bilgisi:</strong> Cihaz türü (iPhone modeli), OS versiyonu (anonim)</li>
+                <li><strong>Uygulama performansı:</strong> Yükleme süreleri, uygulama istikrar metrikleri</li>
+                <li><strong>Oturum süresi:</strong> Uygulamayı oturum başına ne kadar kullandığınız</li>
+            </ul>
+            <p><strong>TOPLAMIYORUZ:</strong></p>
+            <ul>
+                <li>İsminiz, e-posta adresiniz veya herhangi bir iletişim bilgisi</li>
+                <li>Konum verisi veya GPS koordinatları</li>
+                <li>Fotoğraflar, videolar veya kişisel dosyalar</li>
+                <li>Sağlık verisi veya fitness bilgileri</li>
+                <li>Tarayıcı geçmişi veya diğer uygulamalardan veri</li>
+            </ul>
+            <h3>Çökme Raporları</h3>
+            <p>Uygulama istikrarını artırmak için hataları tespit edip düzeltmek amacıyla <strong>Sentry</strong>
+                kullanıyoruz:</p>
+            <ul>
+                <li>Çökme kayıtları ve hata mesajları</li>
+                <li>Cihaz türü ve işletim sistemi versiyonu</li>
+                <li>Uygulama versiyonu ve build numarası</li>
+                <li>Çökme anındaki uygulama durumu (hangi ekran, ne eylem)</li>
+            </ul>
+            <p>Bu, sorunları hızlıca tespit edip çözmemize yardımcı olur. <strong>Kişisel bilgi toplanmaz.</strong></p>
+            <h2>Veri Depolama</h2>
+            <h3>Yerel Depolama</h3>
+            <p>Uygulama ayarları, güvenli iOS depolama mekanizmaları (AsyncStorage) kullanılarak cihazınızda saklanır.
+                Bu veriler, cihazınızın güvenlik özellikleri tarafından korunur:</p>
+            <ul>
+                <li>Cihaz şifresi/parola koruması</li>
+                <li>Face ID / Touch ID biyometrik güvenlik</li>
+                <li>iOS sandboxed depolama (diğer uygulamalardan izole)</li>
+            </ul>
+            <h3>Üçüncü Taraf Depolama</h3>
+            <p>Analitik ve çökme verileri, güvenilir üçüncü taraf hizmetler tarafından işlenir:</p>
+            <ul>
+                <li><strong>Firebase (Google):</strong> Anonim analitik verilerini saklar. <a
+                        href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik
+                        Politikası</a></li>
+                <li><strong>Sentry:</strong> Çökme raporlarını ve hata kayıtlarını saklar. <a
+                        href="https://sentry.io/privacy/" target="_blank">Sentry Gizlilik Politikası</a></li>
+            </ul>
+            <p>Her iki hizmet de GDPR, CCPA ve uluslararası veri koruma standartlarına tam uyumludur. Veriler iletimde
+                ve depolamada şifrelenir.</p>
+            <h2>Üçüncü Taraf Hizmetler</h2>
+            <h3>Firebase Analytics (Google)</h3>
+            <p>Uygulama kullanım kalıplarını anlamak ve özellikleri geliştirmek için Firebase Analytics kullanıyoruz.
+                Firebase şunları toplayabilir:</p>
+            <ul>
+                <li>Anonim cihaz tanımlayıcıları (kişisel kimliğinizle bağlantılı değil)</li>
+                <li>Uygulama etkileşim olayları (buton tıklamaları, ekran değişiklikleri)</li>
+                <li>Performans metrikleri (yükleme süreleri, yanıt verme)</li>
+                <li>Toplam kullanıcı davranış kalıpları</li>
+            </ul>
+            <p>Firebase bu verileri bize içgörüler sağlamak için kullanır ancak <strong>reklam için kullanmaz</strong>.
+            </p>
+            <p><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizliliği hakkında daha
+                    fazla bilgi</a></p>
+            <h3>Sentry</h3>
+            <p>Uygulama kalitesini korumak ve hataları hızlıca düzeltmek için Sentry çökme raporlaması kullanıyoruz.
+                Sentry şunları toplayabilir:</p>
+            <ul>
+                <li>Hata kayıtları ve stack trace'ler</li>
+                <li>Cihaz bilgisi (model, OS versiyonu)</li>
+                <li>Çökmeye yol açan uygulama durumu ve kullanıcı eylemleri</li>
+                <li>Hatanın zamanı ve tarihi</li>
+            </ul>
+            <p>Bu bilgi, hataları verimli bir şekilde yeniden üretmemize ve düzeltmemize yardımcı olur.</p>
+            <p><a href="https://sentry.io/privacy/" target="_blank">Sentry Gizliliği hakkında daha fazla bilgi</a></p>
+            <h2>Bildirimler</h2>
+            <p>Uygulama, duruş kontrolü hatırlatmak için <strong>yerel bildirimler</strong> kullanır. Bu bildirimler:
+            </p>
+            <ul>
+                <li><strong>Tamamen cihazınızda planlanır:</strong> Harici sunucular dahil değildir</li>
+                <li><strong>Özelleştirilebilir:</strong> Sıklığı, zamanlamayı ve içeriği kontrol edersiniz</li>
+                <li><strong>Kolayca devre dışı bırakılabilir:</strong> iOS Ayarları → Bildirimler → Posture'dan
+                    kapatabilirsiniz</li>
+                <li><strong>Gizlilik dostu:</strong> Bildirim içeriği cihazınızdan asla çıkmaz</li>
+            </ul>
+            <p>Harici sunuculardan push bildirimleri göndermiyoruz veya bildirim etkileşimlerini takip etmiyoruz.</p>
+            <div class="important">
+                <h2>⚠️ Medikal Feragatname</h2>
+                <p><strong>Önemli Uyarı:</strong> Posture uygulamasında sağlanan bilgiler <strong>yalnızca genel
+                        rehberlik içindir</strong> ve <strong>profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini
+                        tutmaz</strong>.</p>
+                <p>Kronik ağrınız, sürekli rahatsızlığınız, sağlık endişeleriniz veya mevcut tıbbi durumlarınız varsa,
+                    lütfen bu uygulamada sağlanan herhangi bir duruş önerisi veya egzersizi kullanmadan önce
+                    <strong>yetkili bir sağlık uzmanına danışın</strong>.</p>
+                <p>Biz tıbbi profesyonel değiliz ve uygulamadaki içerik tıbbi tavsiye olarak kabul edilmemelidir. Tıbbi
+                    bir durumla ilgili sorularınız için her zaman doktorunuzun veya diğer yetkili sağlık sağlayıcınızın
+                    rehberliğini arayın.</p>
+                <p><strong>Bu uygulamayı kendi sorumluluğunuzda kullanın.</strong> Uygulamanın önerilerini kullanmaktan
+                    kaynaklanabilecek sağlık sorunları veya yaralanmalardan sorumlu değiliz.</p>
+            </div>
+            <h2>Veri Güvenliği</h2>
+            <p>Veri güvenliğini çok ciddiye alıyoruz ve endüstri standardı uygulamalar kullanıyoruz:</p>
+            <ul>
+                <li><strong>Yerel veri koruması:</strong> iOS yerleşik güvenlik özellikleriyle güvence altına alınmıştır
+                </li>
+                <li><strong>Şifreli iletim:</strong> Firebase ve Sentry'ye gönderilen tüm veriler HTTPS şifrelemesi
+                    kullanır</li>
+                <li><strong>Veri satışı yok:</strong> Verilerinizi reklamverenlere veya üçüncü taraflara satmıyor,
+                    kiralamıyor veya paylaşmıyoruz</li>
+                <li><strong>Minimal veri toplama:</strong> Sadece uygulamayı iyileştirmek için gerekli olanı topluyoruz
+                </li>
+                <li><strong>Düzenli güvenlik denetimleri:</strong> Üçüncü taraf hizmetlerimiz düzenli güvenlik
+                    incelemeleri geçirir</li>
+            </ul>
+            <h2>Çocukların Gizliliği</h2>
+            <p>13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Uygulama minimal anonim analitik veri
+                topladığından ve hesap oluşturmayı gerektirmediğinden, çocuk verisi maruziyeti riski çok düşüktür.</p>
+            <p>Eğer ebeveyn veya vasi iseniz ve çocuğunuzun bu uygulamayı kullandığına inanıyorsanız, lütfen <a
+                    href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a> adresinden bize ulaşın.</p>
+            <h2>Haklarınız (GDPR ve CCPA Uyumluluğu)</h2>
+            <p>GDPR (Avrupa kullanıcıları) ve CCPA (Kaliforniya kullanıcıları) kapsamında aşağıdaki haklara sahipsiniz:
+            </p>
+            <ul>
+                <li><strong>Erişim Hakkı:</strong> Hangi verilere sahip olduğumuz hakkında bilgi talep edebilirsiniz
+                    (minimal anonim analitikler)</li>
+                <li><strong>Silme Hakkı:</strong> Tüm yerel verileri hemen kaldırmak için uygulamayı silin. Analitik
+                    verilerinin silinmesini talep etmek için bize ulaşın</li>
+                <li><strong>Vazgeçme Hakkı:</strong> Şu anda uygulama içi analitik devre dışı bırakmayı desteklemesek
+                    de, OS düzeyinde analitiği devre dışı bırakabilirsiniz</li>
+                <li><strong>Veri Taşınabilirliği Hakkı:</strong> Minimal anonim veri topladığımız için taşınabilir
+                    kişisel veri bulunmamaktadır</li>
+                <li><strong>İtiraz Hakkı:</strong> Uygulamayı kaldırarak veri işlemeye itiraz edebilirsiniz</li>
+            </ul>
+            <p>Bu haklardan herhangi birini kullanmak için bize ulaşın: <a
+                    href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a></p>
+            <h2>Bu Politikanın Değişiklikleri</h2>
+            <p>Yeni özellikler, hizmetler eklediğimizde veya yasal gerekliliklere uymak için zaman zaman bu Gizlilik
+                Politikasını güncelleyebiliriz. Değişiklik yaptığımızda:</p>
+            <ul>
+                <li>Güncellenmiş politika bu sayfada yayınlanacaktır</li>
+                <li>"Son Güncelleme" tarihi revize edilecektir</li>
+                <li>Önemli değişiklikler için kullanıcıları uygulama üzerinden veya e-posta ile (varsa)
+                    bilgilendirebiliriz</li>
+            </ul>
+            <p>Bu Gizlilik Politikasını periyodik olarak gözden geçirmenizi öneririz.</p>
+            <h2>İletişim</h2>
+            <p>Bu Gizlilik Politikası veya veri uygulamalarımız hakkında herhangi bir sorunuz, endişeniz veya talebiniz
+                varsa, lütfen bize ulaşın:</p>
+            <ul>
+                <li><strong>E-posta:</strong> <a href="mailto:akin.daskapan@icloud.com">akin.daskapan@icloud.com</a>
+                </li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/akindaskapan/posture-privacy-policy"
+                        target="_blank">Gizlilik Politikası Deposu</a></li>
+            </ul>
+            <p>Tüm sorulara 7 iş günü içinde yanıt vereceğiz.</p>
+            <hr style="margin: 40px 0; border: none; border-top: 2px solid #e0f2fe;">
+            <p style="text-align: center; color: #64748b; font-size: 0.95em;"><strong>Son Güncelleme:</strong> 25 Aralık
+                2024</p>
+        </div>
     </div>
     <script>
-    function switchLang(lang) {
-        document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
-        document.getElementById('content-' + lang).classList.add('active');
-        document.getElementById('btn-' + lang).classList.add('active');
-    }
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
     </script>
 </body>
 </html>
